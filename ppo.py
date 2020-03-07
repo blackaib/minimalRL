@@ -52,7 +52,7 @@ class PPO(nn.Module):
             
         s,a,r,s_prime,done_mask, prob_a = torch.tensor(s_lst, dtype=torch.float), torch.tensor(a_lst), \
                                           torch.tensor(r_lst), torch.tensor(s_prime_lst, dtype=torch.float), \
-                                          torch.tensor(done_lst, dtype=torch.float), torch.tensor(prob_a_lst)
+                                          torch.tensor(done_lst), torch.tensor(prob_a_lst)
         self.data = []
         return s, a, r, s_prime, done_mask, prob_a
         
